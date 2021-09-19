@@ -26,7 +26,7 @@ public func sort<T: MutableCollection &
 
 /// Splits the `source` collection into two halves, recurses to split those
 /// halves until they cannot be split any further (collection `count <= 1`),
-/// and thn proceeds to merge the smaller fragments together by re-ordering
+/// and then proceeds to merge the smaller fragments together by re-ordering
 /// their contents.
 public func splitThenMerge<T: MutableCollection>(from source: inout T,
                                                  to destination: inout T,
