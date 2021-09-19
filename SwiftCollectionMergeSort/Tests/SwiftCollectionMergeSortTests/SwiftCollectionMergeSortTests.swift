@@ -20,6 +20,18 @@
             self.mergeSortTest([ 0.5, 0.75, 1.0, 0.25, 0.125, 0.25 ])
         }
         
+        func testIntSet() {
+            self.mergeSortTest([ 2, 6, 1, 9, 4, 5, 7 ])
+        }
+        
+        func testStringSet() {
+            self.mergeSortTest([ "d", "a", "b", "z", "y", "abc" ])
+        }
+        
+        func testDoubleSet() {
+            self.mergeSortTest([ 0.5, 0.75, 1.0, 0.25, 0.125 ])
+        }
+        
         // Random testing: this is a proof-of-concept and it is demonstrating
         // how unit-tests can be utilized to test cases which you might have
         // not thought of.
