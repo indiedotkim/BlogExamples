@@ -29,11 +29,11 @@ public func sort<T: MutableCollection &
 /// and thn proceeds to merge the smaller fragments together by re-ordering
 /// their contents.
 public func splitThenMerge<T: MutableCollection>(from source: inout T,
-                                                   to destination: inout T,
-                                                   start: T.Index,
-                                                   end: T.Index) where T.Element: Comparable,
-                                                                       T.Index: Strideable,
-                                                                       T.Index.Stride: SignedInteger {
+                                                 to destination: inout T,
+                                                 start: T.Index,
+                                                 end: T.Index) where T.Element: Comparable,
+                                                                     T.Index: Strideable,
+                                                                     T.Index.Stride: SignedInteger {
     // A collection fragment of size 0 or 1 is sorted by default, because
     // there is just one value within that fragment.
     if start.distance(to: end).magnitude <= 1 { return }
@@ -49,12 +49,12 @@ public func splitThenMerge<T: MutableCollection>(from source: inout T,
 /// `start..<middle` and the second fragment is read from `middle..<end`
 /// (in pseudo notation, since indexes cannot be written like that).
 public func merge<T: MutableCollection>(from source: inout T,
-                                          to destination: inout T,
-                                          start: T.Index,
-                                          middle: T.Index,
-                                          end: T.Index) where T.Element: Comparable,
-                                                              T.Index: Strideable,
-                                                              T.Index.Stride: SignedInteger {
+                                        to destination: inout T,
+                                        start: T.Index,
+                                        middle: T.Index,
+                                        end: T.Index) where T.Element: Comparable,
+                                                            T.Index: Strideable,
+                                                            T.Index.Stride: SignedInteger {
     var (leftIndex, rightIndex) = (start, middle)
     for writeIndex in start..<end {
         if leftIndex < middle
