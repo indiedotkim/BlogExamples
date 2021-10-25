@@ -9,4 +9,4 @@ Example code from [indie.kim](https://indie.kim/).
 ### Command-Line Tools
 
 1. [Swift: Strings, Unicode, and a Touch of Magic](https://indie.kim/post/3-strings)
-
+2. [Swift: MapReduce, Closures, and Other Sorcery](https://indie.kim/post/5-swift-map-reduce)
