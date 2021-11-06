@@ -3,8 +3,6 @@
 
 import Foundation
 
-// https://developer.apple.com/documentation/foundation/jsonencoder/
-
 struct GameCharacter: Codable {
     var name: String
     var title: String?
@@ -20,7 +18,6 @@ print(String(data: try encoder.encode(character), encoding: .utf8)!)
 
 // Prints:
 // {"name":"Kim","skillLevel":100,"title":"Makai White Mage"}
-
 encoder.outputFormatting = .sortedKeys
 print(String(data: try encoder.encode(character), encoding: .utf8)!)
 
